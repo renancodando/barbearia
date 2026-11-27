@@ -1,7 +1,7 @@
 {
-  "name": "cavalier-barbearia",
+  "name": "rncweb-barbearia",
   "version": "1.0.0",
-  "description": "Site comercial da Cavalier Barbearia, por RNCWEB.",
+  "description": "Site da RNCWEB Barbearia.",
   "scripts": {
     "test": "node --test",
     "dev": "vite",

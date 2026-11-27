@@ -14,7 +14,8 @@ export const empresa = {
       nome: "Corte",
       icone: "tesoura",
       resumo: "Estilo e precisão",
-      descricao: "Do clássico ao degradê. Ajuste de volume, desenho do contorno e finalização para o seu tipo de cabelo.",
+      descricao:
+        "Do clássico ao degradê. Ajuste de volume, desenho do contorno e finalização para o seu tipo de cabelo.",
       preco: 80,
       duracao: "45 min",
     },
