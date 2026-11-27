@@ -4,7 +4,7 @@ import "../estilos/responsividade.css";
 import { empresa } from "./configuracao.js";
 import { iniciarAgendamento } from "./agendamento.js";
 import { iniciarNavegacao } from "./navegacao.js";
-import { atualizarContatos, iniciarJanelas, iniciarServicos } from "./interface.js";
+import { atualizarContatos, iniciarJanelas, iniciarServicos, revelarSecoes } from "./interface.js";
 import { iniciarGaleria } from "./galeria.js";
 
 const moeda = new Intl.NumberFormat("pt-BR", {
@@ -19,3 +19,4 @@ atualizarContatos(empresa);
 iniciarGaleria();
 iniciarJanelas();
 iniciarNavegacao();
+revelarSecoes();

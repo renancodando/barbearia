@@ -21,6 +21,11 @@ export function iniciarNavegacao() {
   function atualizar() {
     quadro = 0;
     cabecalho.classList.toggle("rolado", window.scrollY > 12);
+    const percurso = document.documentElement.scrollHeight - innerHeight;
+    cabecalho.style.setProperty(
+      "--leitura",
+      percurso > 0 ? Math.max(0, Math.min(1, scrollY / percurso)) : 0,
+    );
     const linhaLeitura = cabecalho.offsetHeight + Math.min(96, innerHeight * 0.12);
     let atual = secoes[0].link;
     if (window.scrollY > 16) {
@@ -109,8 +114,8 @@ export function iniciarNavegacao() {
     (evento) => {
       if (reduzido.matches || evento.pointerType !== "mouse" || compacto.matches) return;
       const caixa = abertura.getBoundingClientRect();
-      arte.style.setProperty("--arte-x", ((evento.clientX - caixa.left) / caixa.width - 0.5) * -9 + "px");
-      arte.style.setProperty("--arte-y", ((evento.clientY - caixa.top) / caixa.height - 0.5) * -5 + "px");
+      arte.style.setProperty("--arte-x", ((evento.clientX - caixa.left) / caixa.width - 0.5) * -16 + "px");
+      arte.style.setProperty("--arte-y", ((evento.clientY - caixa.top) / caixa.height - 0.5) * -9 + "px");
     },
     { passive: true },
   );

@@ -13,72 +13,125 @@ export function icone(nome) {
 export function iniciarServicos(empresa, formatarPreco) {
   const lista = document.querySelector("#lista-servicos");
   const painel = document.querySelector("#detalhe-servico");
+  const texto = painel.querySelector("#texto-detalhe");
   const rotulo = painel.querySelector("#rotulo-detalhe");
   const titulo = painel.querySelector("#titulo-detalhe");
   const descricao = painel.querySelector("#descricao-detalhe");
-  const acao = painel.querySelector("#acao-detalhe");
   const valor = painel.querySelector("#valor-detalhe");
+  const duracao = painel.querySelector("#duracao-detalhe");
   const agenda = painel.querySelector("#agenda-detalhe");
-  const reduzir = matchMedia("(prefers-reduced-motion: reduce)");
-  let selecionado = null;
-  const introducao = [rotulo.textContent, titulo.textContent, descricao.textContent];
+  const foto = painel.querySelector("#foto-detalhe");
+  const reduzido = matchMedia("(prefers-reduced-motion: reduce)");
+  const horizontal = matchMedia("(max-width: 680px)");
+  let selecionado = -1;
+  let pedidoImagem = 0;
 
-  function selecionar(item, cartao) {
-    const ativo = selecionado !== cartao;
-    selecionado?.setAttribute("aria-pressed", "false");
-    lista.querySelector("[data-destaque]")?.removeAttribute("data-destaque");
-    selecionado = ativo ? cartao : null;
-    cartao.setAttribute("aria-pressed", String(ativo));
-    rotulo.textContent = ativo ? "Nossos Serviços" : introducao[0];
-    titulo.textContent = ativo ? item.nome : introducao[1];
-    descricao.textContent = ativo ? item.descricao : introducao[2];
-    acao.hidden = !ativo;
-    valor.textContent = formatarPreco(item.preco) + " · " + item.duracao;
+  function trocarImagem(item, animar) {
+    const caminho = import.meta.env.BASE_URL + "texturas/servico-" + item.chave + ".webp";
+    const pedido = ++pedidoImagem;
+    if (foto.getAttribute("src") === caminho) {
+      foto.dataset.servico = item.chave;
+      foto.alt = item.imagemAlt;
+      return;
+    }
+    const nova = new Image();
+    nova.addEventListener(
+      "load",
+      () => {
+        if (pedido !== pedidoImagem) return;
+        foto.src = caminho;
+        foto.dataset.servico = item.chave;
+        foto.alt = item.imagemAlt;
+        if (animar && !reduzido.matches) {
+          foto.getAnimations().forEach((movimento) => movimento.cancel());
+          foto.animate(
+            [
+              { opacity: 0.53, transform: "scale(1.024)" },
+              { opacity: 1, transform: "none" },
+            ],
+            {
+              duration: 480,
+              easing: "cubic-bezier(.22,.72,.24,1)",
+            },
+          );
+        }
+      },
+      { once: true },
+    );
+    nova.src = caminho;
+  }
+
+  function selecionar(indice, focar = false) {
+    if (indice === selecionado) return;
+    const item = empresa.servicos[indice];
+    const animar = selecionado !== -1;
+    selecionado = indice;
+    abas.forEach((aba, ordem) => {
+      const ativa = ordem === indice;
+      aba.setAttribute("aria-selected", String(ativa));
+      aba.tabIndex = ativa ? 0 : -1;
+    });
+    painel.setAttribute("aria-labelledby", abas[indice].id);
+    painel.removeAttribute("aria-label");
+    rotulo.textContent = item.resumo;
+    titulo.textContent = item.nome;
+    descricao.textContent = item.descricao;
+    valor.textContent = formatarPreco(item.preco);
+    duracao.textContent = item.duracao;
     agenda.dataset.agendar = item.chave;
-    if (!reduzir.matches && typeof painel.animate === "function") {
-      painel.getAnimations().forEach((animacao) => animacao.cancel());
-      painel.animate(
+    trocarImagem(item, animar);
+    if (animar && !reduzido.matches) {
+      texto.getAnimations().forEach((movimento) => movimento.cancel());
+      texto.animate(
         [
-          { opacity: 0.5, transform: "translateY(3px)" },
+          { opacity: 0.45, transform: "translateY(6px)" },
           { opacity: 1, transform: "none" },
         ],
         {
           duration: 340,
-          easing: "cubic-bezier(.22,.75,.25,1)",
+          easing: "cubic-bezier(.22,.72,.24,1)",
         },
       );
     }
+    if (focar) abas[indice].focus();
   }
 
-  for (const [indice, item] of empresa.servicos.entries()) {
-    const cartao = document.createElement("button");
-    const tituloCartao = document.createElement("strong");
-    const resumo = document.createElement("span");
-    cartao.type = "button";
-    cartao.className = "cartao-servico";
-    cartao.setAttribute("aria-controls", painel.id);
-    cartao.setAttribute("aria-pressed", "false");
-    if (indice === 0) cartao.dataset.destaque = "";
-    tituloCartao.textContent = item.nome;
-    resumo.textContent = item.resumo;
-    cartao.append(icone(item.icone), tituloCartao, resumo);
-    cartao.addEventListener("click", () => selecionar(item, cartao));
-    cartao.addEventListener(
-      "pointermove",
-      (evento) => {
-        if (reduzir.matches || evento.pointerType !== "mouse") return;
-        const caixa = cartao.getBoundingClientRect();
-        cartao.style.setProperty("--luz-x", evento.clientX - caixa.left + "px");
-        cartao.style.setProperty("--luz-y", evento.clientY - caixa.top + "px");
-      },
-      { passive: true },
-    );
-    cartao.addEventListener("pointerleave", () => {
-      cartao.style.removeProperty("--luz-x");
-      cartao.style.removeProperty("--luz-y");
-    });
-    lista.append(cartao);
+  const abas = empresa.servicos.map((item, indice) => {
+    const aba = document.createElement("button");
+    const nome = document.createElement("strong");
+    const tempo = document.createElement("span");
+    aba.type = "button";
+    aba.id = "aba-" + item.chave;
+    aba.className = "cartao-servico";
+    aba.setAttribute("role", "tab");
+    aba.setAttribute("aria-controls", painel.id);
+    nome.textContent = item.nome;
+    tempo.textContent = item.duracao;
+    aba.append(nome, tempo);
+    aba.addEventListener("click", () => selecionar(indice));
+    lista.append(aba);
+    return aba;
+  });
+  function orientarAbas() {
+    lista.setAttribute("aria-orientation", horizontal.matches ? "horizontal" : "vertical");
   }
+  orientarAbas();
+  horizontal.addEventListener("change", orientarAbas);
+  lista.addEventListener("keydown", (evento) => {
+    const recuar = horizontal.matches ? "ArrowLeft" : "ArrowUp";
+    const avancar = horizontal.matches ? "ArrowRight" : "ArrowDown";
+    const alvos = {
+      [recuar]: (selecionado + abas.length - 1) % abas.length,
+      [avancar]: (selecionado + 1) % abas.length,
+      Home: 0,
+      End: abas.length - 1,
+    };
+    if (!Object.hasOwn(alvos, evento.key)) return;
+    evento.preventDefault();
+    selecionar(alvos[evento.key], true);
+  });
+  painel.tabIndex = 0;
+  selecionar(0);
 }
 
 export function atualizarContatos(empresa) {
@@ -112,4 +165,26 @@ export function iniciarJanelas() {
       }
     });
   }
+}
+
+export function revelarSecoes() {
+  const reduzido = matchMedia("(prefers-reduced-motion: reduce)");
+  const observador = new IntersectionObserver(
+    (entradas) => {
+      for (const entrada of entradas) {
+        if (!entrada.isIntersecting) continue;
+        observador.unobserve(entrada.target);
+        if (reduzido.matches) continue;
+        entrada.target.animate(
+          [
+            { opacity: 0.52, transform: "translateY(12px)" },
+            { opacity: 1, transform: "none" },
+          ],
+          { duration: 530, easing: "cubic-bezier(.22,.72,.24,1)" },
+        );
+      }
+    },
+    { threshold: 0.12 },
+  );
+  for (const elemento of document.querySelectorAll("[data-revelar]")) observador.observe(elemento);
 }
