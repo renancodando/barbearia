@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#100f0e" />
     <meta name="author" content="RNCWEB" />
-    <meta name="description" content="Conheça a Cavalier Barbearia. Explore um corte em 3D, veja nossos serviços e solicite seu horário pelo WhatsApp." />
+    <meta
+      name="description"
+      content="Veja o processo do corte na Cavalier Barbearia, confira os serviços e solicite seu horário pelo WhatsApp."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cavalier | Barbearia" />
-    <meta property="og:description" content="Da primeira passada ao acabamento. Explore um corte em 3D." />
+    <meta property="og:description" content="Da primeira passada da máquina ao acabamento à navalha." />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Cavalier Barbearia" />
     <link rel="icon" href="%BASE_URL%marca.svg" type="image/svg+xml" />
@@ -23,79 +26,127 @@
         <span>CAVALIER<small>BARBEARIA</small></span>
       </a>
       <nav aria-label="Navegação principal">
-        <a href="#experiencia">O corte</a><a href="#servicos">Serviços</a><a href="#barbearia">A barbearia</a>
+        <a href="#experiencia">O corte</a><a href="#servicos">Serviços</a
+        ><a href="#barbearia">A barbearia</a>
       </nav>
-      <a class="botao botao-contorno" href="#agendar" data-agendar>Agendar <span aria-hidden="true">↗</span></a>
+      <a class="botao botao-contorno" href="#agendar" data-agendar
+        >Agendar <span aria-hidden="true">↗</span></a
+      >
     </header>
     <main>
-      <section class="experiencia" id="experiencia" aria-labelledby="titulo">
-        <div class="palco">
-          <div class="composicao">
-            <div class="apresentacao">
-              <p class="rotulo">Barbearia de precisão</p>
-              <h1 id="titulo">Mais que um corte,<br />a sua <em>assinatura.</em></h1>
-              <p class="introducao">Acompanhe cada passada em 3D, da primeira redução ao acabamento à navalha.</p>
-              <a class="botao botao-dourado" href="#agendar" data-agendar>Agendar meu corte <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="visor" id="visor" role="img" aria-label="Busto masculino. O cabelo se transforma conforme o progresso do corte.">
-              <div class="halo"></div>
-              <svg class="reserva" viewBox="0 0 420 430" aria-hidden="true">
-                <defs>
-                  <linearGradient id="pele" x2=".75" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#bc8861"/><stop offset=".56" stop-color="#78523e"/><stop offset="1" stop-color="#2d201a"/></linearGradient>
-                  <linearGradient id="capa" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#38312b"/><stop offset=".45" stop-color="#111111"/><stop offset=".8" stop-color="#242018"/><stop offset="1" stop-color="#080807"/></linearGradient>
-                </defs>
-                <path d="M53 420Q53 370 164 346L170 312H249L264 343Q364 359 389 420Z" fill="url(#capa)"/>
-                <path d="M159 333L166 286H247L252 338Q207 362 159 333Z" fill="#6f4b38"/>
-                <path d="M139 145Q156 83 220 82Q291 91 297 183L309 230L294 242Q291 297 255 314Q202 334 161 287L139 244Q118 237 121 210Q123 195 137 207Z" fill="url(#pele)"/>
-                <path id="cabelo-reserva" d="M135 222Q104 195 116 143Q102 124 129 102Q139 80 172 79Q194 49 232 65Q265 51 294 82Q320 99 306 134Q297 162 284 172Q281 147 259 146Q234 161 205 158Q180 155 161 175L153 215Z" fill="#211a16" stroke="#65452f" stroke-width="2"/>
-                <path d="M250 213Q264 207 278 213M273 251Q283 248 292 250M161 345Q207 365 253 343" fill="none" stroke="#35271f" stroke-width="5" stroke-linecap="round"/>
-              </svg>
-              <canvas id="cena" aria-hidden="true"></canvas>
-              <p id="aviso-cena" class="aviso-cena" aria-live="polite">Preparando o modelo 3D…</p>
-            </div>
+      <section class="abertura" aria-labelledby="titulo">
+        <picture class="retrato">
+          <source media="(max-width: 640px)" srcset="%BASE_URL%texturas/retrato-celular.webp" />
+          <img
+            src="%BASE_URL%texturas/retrato.webp"
+            alt="Retrato em perfil de um homem com cabelo ondulado e capa de barbeiro"
+            fetchpriority="high"
+            width="1536"
+            height="1024"
+          />
+        </picture>
+        <div class="apresentacao">
+          <p class="rotulo">Barbearia de precisão</p>
+          <h1 id="titulo">Mais que um corte,<br />a sua <em>assinatura.</em></h1>
+          <p class="introducao">
+            Corte, barba e acabamento à navalha. Cada detalhe pensado para o seu rosto e para a sua rotina.
+          </p>
+          <a class="botao botao-dourado" href="#agendar" data-agendar
+            >Agendar meu corte <span aria-hidden="true">↗</span></a
+          >
+          <a class="explorar" href="#experiencia">Veja o processo <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+      <section class="processo faixa" id="experiencia" aria-labelledby="titulo-processo">
+        <div class="cabecalho-processo">
+          <div>
+            <p class="rotulo">O processo do corte</p>
+            <h2 id="titulo-processo">
+              Da primeira passada<br />
+              <em>ao acabamento.</em>
+            </h2>
           </div>
-          <div class="controle">
-            <div class="estado">
-              <div><span class="rotulo">O processo do corte</span><p id="nome-etapa">Antes do corte</p></div>
-              <span class="dica" id="dica-corte">Role para conduzir o corte <span aria-hidden="true">↓</span></span>
-            </div>
-            <label class="oculto" for="progresso">Progresso do corte</label>
-            <input type="range" id="progresso" min="0" max="1000" value="0" aria-describedby="dica-corte" />
-            <div class="etapas" aria-label="Etapas do corte">
-              <button type="button" data-etapa="0" aria-pressed="true"><i></i>Antes</button>
-              <button type="button" data-etapa=".33" aria-pressed="false"><i></i>Máquina</button>
-              <button type="button" data-etapa=".55" aria-pressed="false"><i></i>Tesoura</button>
-              <button type="button" data-etapa=".78" aria-pressed="false"><i></i>Navalha</button>
-              <button type="button" data-etapa="1" aria-pressed="false"><i></i>Resultado</button>
-            </div>
-            <div class="opcoes-corte" aria-label="Estilo de corte">
-              <button type="button" data-estilo="0" aria-pressed="true">Degradê clássico</button>
-              <button type="button" data-estilo="1" aria-pressed="false">Topo texturizado</button>
-            </div>
-          </div>
+          <p>
+            A máquina define a base. O trabalho de tesoura dá forma ao topo. O acabamento realça a transição
+            e o contorno.
+          </p>
+        </div>
+        <div class="vitrine-processo" >
+          <figure id="processo-maquina">
+            <img
+              src="%BASE_URL%texturas/maquina.webp"
+              alt="Máquina de corte acima da orelha, junto aos fios curtos do degradê"
+              width="512"
+              height="1024"
+              loading="lazy"
+            />
+            <figcaption><strong>Máquina</strong><span>Construção do degradê.</span></figcaption>
+          </figure>
+          <figure id="processo-tesoura">
+            <img
+              src="%BASE_URL%texturas/tesoura.webp"
+              alt="Tesoura e pente trabalhando as mechas do topo"
+              width="512"
+              height="1024"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Tesoura e pente</strong><span>Forma e textura nas mechas do topo.</span>
+            </figcaption>
+          </figure>
+          <figure id="processo-resultado">
+            <img
+              src="%BASE_URL%texturas/resultado.webp"
+              alt="Corte finalizado com transição rente na lateral e topo ondulado"
+              width="512"
+              height="1024"
+              loading="lazy"
+            />
+            <figcaption>
+              <strong>Acabamento</strong><span>Contorno definido e finalização.</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
       <section class="servicos faixa" id="servicos" aria-labelledby="titulo-servicos">
         <div>
           <p class="rotulo">Na cadeira</p>
           <h2 id="titulo-servicos">O ritual <em>Cavalier.</em></h2>
-          <p>Da conversa que define o corte à última passada da navalha. Escolha o atendimento que faz sentido para você.</p>
+          <p>
+            Da conversa que define o corte à última passada da navalha. Escolha o atendimento que faz
+            sentido para você.
+          </p>
         </div>
         <ul class="tabela" id="lista-servicos"></ul>
       </section>
       <section class="barbearia" id="barbearia" aria-labelledby="titulo-barbearia">
-        <img src="%BASE_URL%texturas/oficina.webp" alt="Poltrona de couro escuro em uma barbearia iluminada em bronze" loading="lazy" width="1440" height="960" />
+        <img
+          src="%BASE_URL%texturas/oficina.webp"
+          alt="Poltrona de couro escuro em uma barbearia iluminada em bronze"
+          loading="lazy"
+          width="1440"
+          height="960"
+        />
         <div>
           <p class="rotulo">A barbearia</p>
           <h2 id="titulo-barbearia">Tempo para<br /><em>o detalhe.</em></h2>
-          <p>Couro, madeira e luz baixa. Um espaço para desacelerar, conversar sobre o corte e sair com um acabamento pensado para a sua rotina.</p>
+          <p>
+            Couro, madeira e luz baixa. Um espaço para desacelerar, conversar sobre o corte e sair com um
+            acabamento pensado para a sua rotina.
+          </p>
           <dl id="informacoes"></dl>
-          <a class="botao botao-contorno" href="#agendar" data-agendar>Solicitar horário <span aria-hidden="true">↗</span></a>
+          <a class="botao botao-contorno" href="#agendar" data-agendar
+            >Solicitar horário <span aria-hidden="true">↗</span></a
+          >
         </div>
       </section>
     </main>
     <footer class="rodape">
-      <a class="marca" href="#inicio"><img src="%BASE_URL%marca.svg" width="36" height="36" alt="" /><span>CAVALIER<small>BARBEARIA</small></span></a>
+      <a class="marca" href="#inicio"
+        ><img src="%BASE_URL%marca.svg" width="36" height="36" alt="" /><span
+          >CAVALIER<small>BARBEARIA</small></span
+        ></a
+      >
       <a id="whatsapp" href="#agendar">WhatsApp <span aria-hidden="true">↗</span></a>
       <small>Projeto por <strong>RNCWEB</strong></small>
     </footer>
@@ -105,12 +156,17 @@
         <p class="rotulo">Cavalier</p>
         <h2 id="titulo-agendar">Reserve seu tempo.</h2>
         <p>Envie sua preferência. A confirmação é feita pelo WhatsApp.</p>
-        <label>Serviço <select name="servico" required></select></label>
+        <label
+          >Serviço
+          <select name="servico" required></select
+        ></label>
         <div class="preferencia">
           <label>Data de preferência <input type="date" name="data" required /></label>
           <label>Horário de preferência <input type="time" name="hora" required /></label>
         </div>
-        <button class="botao botao-dourado" type="submit">Solicitar no WhatsApp <span aria-hidden="true">↗</span></button>
+        <button class="botao botao-dourado" type="submit">
+          Solicitar no WhatsApp <span aria-hidden="true">↗</span>
+        </button>
       </form>
     </dialog>
     <script type="module" src="/src/scripts/principal.js"></script>

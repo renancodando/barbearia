@@ -1,7 +1,7 @@
 {
   "name": "cavalier-barbearia",
   "version": "1.0.0",
-  "description": "Experiência de corte tridimensional da Cavalier Barbearia, por RNCWEB.",
+  "description": "Site comercial da Cavalier Barbearia, por RNCWEB.",
   "scripts": {
     "test": "node --test",
     "dev": "vite",
@@ -19,9 +19,6 @@
     "url": "https://github.com/renancodando/barbearia/issues"
   },
   "homepage": "https://github.com/renancodando/barbearia#readme",
-  "dependencies": {
-    "three": "0.180.0"
-  },
   "devDependencies": {
     "prettier": "3.6.2",
     "vite": "7.3.1"
