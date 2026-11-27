@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leads Odonto RNCWEB</title>
+<!-- RNCWEB -->
+<style>
+:root{--fundo:#0d0d0f;--cartao:#17171b;--borda:#2a2a31;--texto:#f2efe8;--suave:#9d9aa3;--ouro:#c9a45c;--zap:#25d366}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--fundo:#f6f4ef;--cartao:#fff;--borda:#e3ded3;--texto:#1b1a17;--suave:#6c685f;--ouro:#9a7426}}
+*{box-sizing:border-box;margin:0}
+body{background:var(--fundo);color:var(--texto);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding:clamp(16px,4vw,40px)}
+header{max-width:1200px;margin:0 auto 24px}
+h1{font-size:clamp(22px,4vw,32px);letter-spacing:-.02em}
+h1 b{color:var(--ouro)}
+.resumo{color:var(--suave);margin-top:6px}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.filtros input{flex:1 1 220px;min-width:0;padding:11px 14px;border-radius:10px;border:1px solid var(--borda);background:var(--cartao);color:var(--texto);font:inherit}
+.filtros button{padding:10px 16px;border-radius:999px;border:1px solid var(--borda);background:transparent;color:var(--texto);font:inherit;cursor:pointer;transition:.2s}
+.filtros button[aria-pressed="true"]{background:var(--ouro);border-color:var(--ouro);color:#111}
+main{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:14px}
+.lead{background:var(--cartao);border:1px solid var(--borda);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px;animation:surge .4s ease both;transition:transform .2s,border-color .2s}
+.lead:hover{transform:translateY(-2px);border-color:var(--ouro)}
+.lead[hidden]{display:none}
+.topo{display:flex;justify-content:space-between;font-size:12px;color:var(--suave)}
+.selo{padding:2px 8px;border-radius:999px;border:1px solid var(--borda)}
+.selo.confirmado{border-color:var(--zap);color:var(--zap)}
+h2{font-size:16px;line-height:1.3}
+.local,.nota{color:var(--suave);font-size:13px}
+.zap{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border-radius:10px;background:var(--zap);color:#062b14;font-weight:600;text-decoration:none;transition:filter .2s}
+.zap:hover{filter:brightness(1.08)}
+.zap svg{width:18px;height:18px;fill:currentColor}
+.zap.visto{background:transparent;color:var(--zap);border:1px solid var(--zap)}
+body.pronto .lead{animation:none}
+@keyframes surge{from{opacity:0;transform:translateY(8px)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Consultórios sem site <b>com WhatsApp confirmado</b></h1>
+  <p class="resumo">41 leads · 27 no Nordeste · 14 no Sul · CNPJ ativo · o botão já abre a conversa com a mensagem pronta</p>
+  <div class="filtros">
+    <input id="busca" type="search" placeholder="Buscar por nome, cidade ou bairro">
+    <button data-filtro="todos" aria-pressed="true">Todos</button>
+    <button data-filtro="Nordeste" aria-pressed="false">Nordeste</button>
+    <button data-filtro="Sul" aria-pressed="false">Sul</button>
+  </div>
+</header>
+<main>
+<article class="lead" data-regiao="Nordeste" data-busca="ortocare odontologia especializada recife várzea">
+  <div class="topo"><span class="selo confirmado">Maps confirmado</span><span class="porte">Micro</span></div>
+  <h2>Ortocare Odontologia Especializada</h2>
+  <p class="local">Várzea · Recife/PE</p>
+  <p class="nota">Só Instagram no Google Maps · 5,0 (19 avaliações)</p>
+  <a class="zap" href="https://wa.me/5581986269977?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Ortocare%20Odontologia%20Especializada%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(81) 98626-9977</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="unita odontologia humanizada campina grande vila cabral">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Unita Odontologia Humanizada</h2>
+  <p class="local">Vila Cabral · Campina Grande/PB</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5583993981010?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Unita%20Odontologia%20Humanizada%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(83) 99398-1010</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="oralclass odontologia especializada ss ltda caruaru maurício de nassau">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>OralClass Odontologia Especializada SS Ltda</h2>
+  <p class="local">Maurício de Nassau · Caruaru/PE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5581971118469?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20OralClass%20Odontologia%20Especializada%20SS%20Ltda%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(81) 97111-8469</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="master sorriso feira de santana centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Master Sorriso</h2>
+  <p class="local">Centro · Feira De Santana/BA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5575983420101?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Master%20Sorriso%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(75) 98342-0101</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="surpreendente fortaleza aldeota">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>SurpreenDente</h2>
+  <p class="local">Aldeota · Fortaleza/CE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5585999713711?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20SurpreenDente%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(85) 99971-3711</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dr isaac holanda adami fortaleza parreão">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dr Isaac Holanda Adami</h2>
+  <p class="local">Parreão · Fortaleza/CE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5585998168944?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dr%20Isaac%20Holanda%20Adami%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(85) 99816-8944</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="clinica benjamim (odontologia integrada) fortaleza siqueira">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Clinica Benjamim (Odontologia Integrada)</h2>
+  <p class="local">Siqueira · Fortaleza/CE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/558534982989?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Clinica%20Benjamim%20%28Odontologia%20Integrada%29%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(85) 3498-2989</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="visage &amp; cia odontologia jaboatao dos guararapes janga">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Visage &amp; Cia Odontologia</h2>
+  <p class="local">Janga · Jaboatao Dos Guararapes/PE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5581982623005?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Visage%20%26%20Cia%20Odontologia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(81) 98262-3005</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="sorricenter joao pessoa centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Sorricenter</h2>
+  <p class="local">Centro · Joao Pessoa/PB</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5583988210405?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Sorricenter%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(83) 98821-0405</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dental logo joao pessoa centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dental Logo</h2>
+  <p class="local">Centro · Joao Pessoa/PB</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5583996087956?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dental%20Logo%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(83) 99608-7956</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dental friend joao pessoa torre">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dental Friend</h2>
+  <p class="local">Torre · Joao Pessoa/PB</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5583981883045?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dental%20Friend%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(83) 98188-3045</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="quality oral clinic lauro de freitas ">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Quality Oral Clinic</h2>
+  <p class="local">Lauro De Freitas/BA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5571984415515?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Quality%20Oral%20Clinic%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(71) 98441-5515</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="nova clinica odontologica lauro de freitas vida nova">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Nova Clinica Odontologica</h2>
+  <p class="local">Vida Nova · Lauro De Freitas/BA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5571984602565?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Nova%20Clinica%20Odontologica%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(71) 98460-2565</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="sorris clínica odontológica mossoro centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Sorris Clínica Odontológica</h2>
+  <p class="local">Centro · Mossoro/RN</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5584996528982?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Sorris%20Cl%C3%ADnica%20Odontol%C3%B3gica%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(84) 99652-8982</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="ortodents olinda madalena">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Ortodents</h2>
+  <p class="local">Madalena · Olinda/PE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5581998519278?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Ortodents%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(81) 99851-9278</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="clínica do povo parnaiba boa esperança">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Clínica do Povo</h2>
+  <p class="local">Boa Esperança · Parnaiba/PI</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5586994490872?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Cl%C3%ADnica%20do%20Povo%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(86) 99449-0872</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="ciebe odonto petrolina centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Ciebe Odonto</h2>
+  <p class="local">Centro · Petrolina/PE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5587981452021?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Ciebe%20Odonto%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(87) 98145-2021</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="mg odontologia salvador alphaville i">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Mg Odontologia</h2>
+  <p class="local">Alphaville I · Salvador/BA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5571991826404?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Mg%20Odontologia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(71) 99182-6404</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dra amanda leal odontologia infantil especializada salvador candeal">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dra Amanda Leal Odontologia Infantil Especializada</h2>
+  <p class="local">Candeal · Salvador/BA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5571982350382?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dra%20Amanda%20Leal%20Odontologia%20Infantil%20Especializada%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(71) 98235-0382</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="sorri &amp; dent prime sao luis cohama">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Sorri &amp; Dent Prime</h2>
+  <p class="local">Cohama · Sao Luis/MA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5598992424633?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Sorri%20%26%20Dent%20Prime%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(98) 99242-4633</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="sorriso e cia sao luis centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Sorriso e Cia</h2>
+  <p class="local">Centro · Sao Luis/MA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5598985001463?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Sorriso%20e%20Cia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(98) 98500-1463</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="clinica meu sorriso slz sao luis cohama">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Clinica Meu Sorriso SLZ</h2>
+  <p class="local">Cohama · Sao Luis/MA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5598982378572?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Clinica%20Meu%20Sorriso%20SLZ%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(98) 98237-8572</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dr sorriso teresina parque piauí">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dr Sorriso</h2>
+  <p class="local">Parque Piauí · Teresina/PI</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5586994549305?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dr%20Sorriso%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(86) 99454-9305</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="ortoestetica alto da ressurreição teresina gurupi">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Ortoestetica Alto da Ressurreição</h2>
+  <p class="local">Gurupi · Teresina/PI</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5586994286405?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Ortoestetica%20Alto%20da%20Ressurrei%C3%A7%C3%A3o%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(86) 99428-6405</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dente white teresina poti velho">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dente White</h2>
+  <p class="local">Poti Velho · Teresina/PI</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5586999208288?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dente%20White%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(86) 99920-8288</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="odontolaine recife maranguape ii">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Pequena</span></div>
+  <h2>Odontolaine</h2>
+  <p class="local">Maranguape II · Recife/PE</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5581991052318?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Odontolaine%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(81) 99105-2318</a>
+</article>
+<article class="lead" data-regiao="Nordeste" data-busca="dental studio odontologia integrada iii ltda salvador cajazeiras viii">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Demais</span></div>
+  <h2>Dental Studio Odontologia Integrada III Ltda</h2>
+  <p class="local">Cajazeiras VIII · Salvador/BA</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5571993246058?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dental%20Studio%20Odontologia%20Integrada%20III%20Ltda%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(71) 99324-6058</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="jani aparecida da silva - clinica odontologica curitiba uberaba">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Jani Aparecida da Silva - Clinica Odontologica</h2>
+  <p class="local">Uberaba · Curitiba/PR</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5541996148777?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Jani%20Aparecida%20da%20Silva%20-%20Clinica%20Odontologica%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(41) 99614-8777</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="clinica sua essência curitiba vila izabel">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Clinica Sua Essência</h2>
+  <p class="local">Vila Izabel · Curitiba/PR</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/554130249409?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Clinica%20Sua%20Ess%C3%AAncia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(41) 3024-9409</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="carmo odontologia especializada curitiba hauer">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Carmo Odontologia Especializada</h2>
+  <p class="local">Hauer · Curitiba/PR</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/554132766071?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Carmo%20Odontologia%20Especializada%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(41) 3276-6071</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="gaeski clinica odontologica joinville anita garibaldi">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Gaeski Clinica Odontologica</h2>
+  <p class="local">Anita Garibaldi · Joinville/SC</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/554734329442?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Gaeski%20Clinica%20Odontologica%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(47) 3432-9442</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="dra. bianca lenita da silva de oliveira odontologia passo fundo centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Dra. Bianca Lenita da Silva de Oliveira Odontologia</h2>
+  <p class="local">Centro · Passo Fundo/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5554991561571?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Dra.%20Bianca%20Lenita%20da%20Silva%20de%20Oliveira%20Odontologia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(54) 99156-1571</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="vitadent odontologia ponta grossa uvaranas">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Vitadent Odontologia</h2>
+  <p class="local">Uvaranas · Ponta Grossa/PR</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5542999742001?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Vitadent%20Odontologia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(42) 99974-2001</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="clinica dr marilia loureiro porto alegre petrópolis">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Clinica Dr Marilia Loureiro</h2>
+  <p class="local">Petrópolis · Porto Alegre/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/555133888635?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Clinica%20Dr%20Marilia%20Loureiro%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(51) 3388-8635</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="sommer &amp; furlan odontologia ltda porto alegre centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Sommer &amp; Furlan Odontologia Ltda</h2>
+  <p class="local">Centro · Porto Alegre/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5551980361415?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Sommer%20%26%20Furlan%20Odontologia%20Ltda%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(51) 98036-1415</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="oral fácil porto alegre mathias velho">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Oral Fácil</h2>
+  <p class="local">Mathias Velho · Porto Alegre/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5551981580036?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Oral%20F%C3%A1cil%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(51) 98158-0036</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="becker e castro odontologia sao jose areias">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Micro</span></div>
+  <h2>Becker e Castro Odontologia</h2>
+  <p class="local">Areias · Sao Jose/SC</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5548984596201?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Becker%20e%20Castro%20Odontologia%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(48) 98459-6201</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="splendia odonto curitiba pioneiros">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Pequena</span></div>
+  <h2>Splendia Odonto</h2>
+  <p class="local">Pioneiros · Curitiba/PR</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5541987309796?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Splendia%20Odonto%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(41) 98730-9796</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="consultorio odontologico aline moraes ltda pelotas centro">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Pequena</span></div>
+  <h2>Consultorio Odontologico Aline Moraes Ltda</h2>
+  <p class="local">Centro · Pelotas/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5553991695954?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Consultorio%20Odontologico%20Aline%20Moraes%20Ltda%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(53) 99169-5954</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="mazzoleni &amp; natividade clinica odontologica ltda porto alegre jardim botânico">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Pequena</span></div>
+  <h2>Mazzoleni &amp; Natividade Clinica Odontologica Ltda</h2>
+  <p class="local">Jardim Botânico · Porto Alegre/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5551995950634?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20Mazzoleni%20%26%20Natividade%20Clinica%20Odontologica%20Ltda%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(51) 99595-0634</a>
+</article>
+<article class="lead" data-regiao="Sul" data-busca="n&amp;a odontologia ltda. porto alegre canudos">
+  <div class="topo"><span class="selo ">Sem site</span><span class="porte">Pequena</span></div>
+  <h2>N&amp;A Odontologia Ltda.</h2>
+  <p class="local">Canudos · Porto Alegre/RS</p>
+  <p class="nota">Sem site no Google/web e sem domínio com o nome</p>
+  <a class="zap" href="https://wa.me/5551996730945?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Encontrei%20a%20N%26A%20Odontologia%20Ltda.%20e%20vi%20que%20voc%C3%AAs%20ainda%20n%C3%A3o%20t%C3%AAm%20um%20site%20pr%C3%B3prio.%20Sou%20da%20RNCWEB%20e%20crio%20sites%20para%20consult%C3%B3rios%20odontol%C3%B3gicos%2C%20j%C3%A1%20dentro%20das%20regras%20de%20publicidade%20do%20CFO.%20Posso%20te%20mandar%20uma%20pr%C3%A9via%20gratuita%20de%20como%20ficaria%20o%20site%20de%20voc%C3%AAs%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>(51) 99673-0945</a>
+</article>
+</main>
+<script>
+const cartoes=[...document.querySelectorAll('.lead')],botoes=[...document.querySelectorAll('[data-filtro]')],busca=document.getElementById('busca');
+let regiao='todos';
+setTimeout(()=>document.body.classList.add('pronto'),700);
+const filtrar=()=>{const t=busca.value.trim().toLowerCase();cartoes.forEach(c=>c.hidden=!((regiao==='todos'||c.dataset.regiao===regiao)&&c.dataset.busca.includes(t)))};
+botoes.forEach(b=>b.onclick=()=>{regiao=b.dataset.filtro;botoes.forEach(x=>x.setAttribute('aria-pressed',x===b));filtrar()});
+busca.oninput=filtrar;
+let vistos=[];try{vistos=JSON.parse(localStorage.getItem('rncweb-vistos')||'[]')}catch(e){}
+document.querySelectorAll('.zap').forEach(z=>{if(vistos.includes(z.href))z.classList.add('visto');z.addEventListener('click',()=>{z.classList.add('visto');vistos.push(z.href);try{localStorage.setItem('rncweb-vistos',JSON.stringify(vistos))}catch(e){}})});
+</script>
+</body>
+</html>
