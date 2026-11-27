@@ -4,9 +4,9 @@ import { empresa } from "./src/scripts/configuracao.js";
 
 export default defineConfig(({ mode }) => {
   const variaveis = loadEnv(mode, process.cwd(), "");
-  const URL_PUBLICA = variaveis.CAVALIER_URL || empresa.url;
+  const URL_PUBLICA = variaveis.RNCWEB_URL || variaveis.CAVALIER_URL || empresa.url;
   const url = URL_PUBLICA ? new URL("./", URL_PUBLICA).href : "";
-  const imagem = url ? new URL("texturas/retrato.webp", url).href : "";
+  const imagem = url ? new URL("texturas/arte-dourada.webp", url).href : "";
   const dados = {
     "@context": "https://schema.org",
     "@type": "HairSalon",
@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
     base: "./",
     plugins: [
       {
-        name: "metadados-cavalier",
+        name: "metadados-rncweb",
         transformIndexHtml() {
           return [
             {
