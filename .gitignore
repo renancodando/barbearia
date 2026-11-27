@@ -1,0 +1,12 @@
+# RNCWEB
+node_modules/
+dist/
+.vs/
+bin/
+obj/
+.vercel/
+.env*
+*.log
+.DS_Store
+.idea/
+.vscode/

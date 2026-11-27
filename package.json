@@ -1,0 +1,31 @@
+{
+  "name": "cavalier-barbearia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renancodando/barbearia.git"
+  },
+  "keywords": [],
+  "author": "RNCWEB",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/renancodando/barbearia/issues"
+  },
+  "homepage": "https://github.com/renancodando/barbearia#readme",
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "vite": "7.3.1"
+  }
+}
