@@ -1,8 +1,7 @@
 {
   "name": "cavalier-barbearia",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Experiência de corte tridimensional da Cavalier Barbearia, por RNCWEB.",
   "scripts": {
     "test": "node --test",
     "dev": "vite",
@@ -13,9 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/renancodando/barbearia.git"
   },
-  "keywords": [],
   "author": "RNCWEB",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "type": "module",
   "bugs": {
     "url": "https://github.com/renancodando/barbearia/issues"
