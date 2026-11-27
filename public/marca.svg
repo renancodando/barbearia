@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- RNCWEB -->
-  <path d="M24 3 43 13v15c0 8-9 14-19 17C14 42 5 36 5 28V13Z" fill="none" stroke="#bf925f"/>
-  <path d="m14 16 9 14m11-14L25 30m-7 2a3.6 3.6 0 1 1-7 0 3.6 3.6 0 0 1 7 0Zm19 0a3.6 3.6 0 1 1-7 0 3.6 3.6 0 0 1 7 0Z" fill="none" stroke="#e3bd8b" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="24" cy="21" r="1" fill="#e3bd8b"/>
+  <rect width="64" height="64" rx="13" fill="#151413"/>
+  <g stroke="#f2c47c" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="20" cy="45" r="6"/><circle cx="44" cy="45" r="6"/>
+    <path d="M24 40l23-25M40 40L17 15m15 17 1-1"/>
+  </g>
 </svg>

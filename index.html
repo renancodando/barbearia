@@ -4,170 +4,225 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#100f0e" />
+    <meta name="theme-color" content="#101010" />
     <meta name="author" content="RNCWEB" />
-    <meta
-      name="description"
-      content="Veja o processo do corte na Cavalier Barbearia, confira os serviços e solicite seu horário pelo WhatsApp."
-    />
+    <meta name="description" content="Cortes personalizados, barba e acabamento na RNCWEB Barbearia. Conheça os serviços e solicite seu horário pelo WhatsApp." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cavalier | Barbearia" />
-    <meta property="og:description" content="Da primeira passada da máquina ao acabamento à navalha." />
+    <meta property="og:title" content="RNCWEB | Barbearia Premium" />
+    <meta property="og:description" content="Estilo, corte e atitude. Conheça a RNCWEB Barbearia e solicite seu horário." />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Cavalier Barbearia" />
+    <meta property="og:site_name" content="RNCWEB Barbearia" />
     <link rel="icon" href="%BASE_URL%marca.svg" type="image/svg+xml" />
-    <title>Cavalier | Barbearia</title>
+    <title>RNCWEB | Barbearia Premium</title>
   </head>
   <body>
+    <svg class="simbolos" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-tesoura" viewBox="0 0 32 32">
+        <circle cx="7.5" cy="24.5" r="4.2"/><circle cx="24.5" cy="24.5" r="4.2"/>
+        <path d="M10.5 21.5 27 4M21.5 21.5 5 4m9.5 10.5 3 3"/>
+      </symbol>
+      <symbol id="i-barba" viewBox="0 0 32 32">
+        <path d="M3 4c.7 3 2.6 5.8 5 7.1 2 1 4.4-1 8-1s6 2 8 1c2.4-1.3 4.3-4.1 5-7.1.3 10.7-2.3 17.7-7 20.5L16 29l-6-4.5C5.3 21.7 2.7 14.7 3 4Z"/>
+        <path d="M8 17c2-2.6 5.2-3.3 8-.3 2.8-3 6-2.3 8 .3M12 21h8"/>
+      </symbol>
+      <symbol id="i-diamante" viewBox="0 0 32 32">
+        <path d="M3 12 9 5h14l6 7-13 15L3 12Zm0 0h26M9 5l2 7 5 15 5-15 2-7m-12 7 5-7 5 7"/>
+      </symbol>
+      <symbol id="i-cafe" viewBox="0 0 32 32">
+        <path d="M5 13h20v4c0 6-4 9-10 9S5 23 5 17v-4Zm20 1h2.5a3.5 3.5 0 0 1 0 7H24M3 28h24M10 10c3-3-2-4 0-7m5 7c3-3-2-4 0-7m5 7c3-3-2-4 0-7"/>
+      </symbol>
+      <symbol id="i-navalha" viewBox="0 0 32 32">
+        <path d="m5 20 15-15a5 5 0 0 1 7 7L12 27a5 5 0 0 1-7-7Zm4 3 10-10m3-3 1-1M5 20l7 7"/>
+      </symbol>
+      <symbol id="i-camadas" viewBox="0 0 32 32">
+        <path d="m3 10 13-6 13 6-13 6-13-6Zm0 6 13 6 13-6M3 22l13 6 13-6"/>
+      </symbol>
+      <symbol id="i-agenda" viewBox="0 0 32 32">
+        <rect x="4" y="7" width="24" height="22" rx="3"/><path d="M10 3v8m12-8v8M4 14h24m-18 5h1m5 0h1m5 0h1m-13 5h1m5 0h1m5 0h1"/>
+      </symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 32 32">
+        <path d="M28.7 15.7A12.7 12.7 0 0 1 10 27L3 29l2-6.8a12.7 12.7 0 1 1 23.7-6.5Z"/>
+        <path d="M11 9.4c-.7 0-1.9.8-1.9 2.4 0 4 6.3 10.3 10.4 10.3 1.6 0 2.4-1.2 2.4-2l-3.7-2-1.3 1c-1.9-.8-3.8-2.7-4.6-4.6l1-1.3-2.3-3.8Z"/>
+      </symbol>
+      <symbol id="i-local" viewBox="0 0 32 32">
+        <path d="M27 13c0 7-11 16-11 16S5 20 5 13a11 11 0 0 1 22 0Z"/><circle cx="16" cy="13" r="3.5"/>
+      </symbol>
+      <symbol id="i-relogio" viewBox="0 0 32 32">
+        <circle cx="16" cy="16" r="12"/><path d="M16 8v8l6 3"/>
+      </symbol>
+      <symbol id="i-conhecer" viewBox="0 0 32 32">
+        <path d="M7 5a1.5 1.5 0 0 1 2.3-1.3l17 11a1.5 1.5 0 0 1 0 2.6l-17 11A1.5 1.5 0 0 1 7 27Z"/>
+      </symbol>
+      <symbol id="i-mais" viewBox="0 0 32 32"><path d="M16 8v16M8 16h16"/></symbol>
+      <symbol id="i-esquerda" viewBox="0 0 32 32"><path d="m19 7-8 9 8 9"/></symbol>
+      <symbol id="i-direita" viewBox="0 0 32 32"><path d="m13 7 8 9-8 9"/></symbol>
+    </svg>
     <a class="pular" href="#servicos">Pular para os serviços</a>
-    <header class="cabecalho" id="inicio">
-      <a class="marca" href="#inicio">
-        <img src="%BASE_URL%marca.svg" width="41" height="41" alt="" />
-        <span>CAVALIER<small>BARBEARIA</small></span>
-      </a>
-      <nav aria-label="Navegação principal">
-        <a href="#experiencia">O corte</a><a href="#servicos">Serviços</a
-        ><a href="#barbearia">A barbearia</a>
-      </nav>
-      <a class="botao botao-contorno" href="#agendar" data-agendar
-        >Agendar <span aria-hidden="true">↗</span></a
-      >
+    <header class="cabecalho">
+      <div class="barra">
+        <a class="marca" href="#inicio" aria-label="RNCWEB Barbearia, início">
+          <span>RNCWEB</span><small>Barbearia</small>
+        </a>
+        <nav id="navegacao" class="navegacao" aria-label="Navegação principal">
+          <a href="#inicio" aria-current="location">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#barbeiros">Barbeiros</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+          <span class="traco-nav" aria-hidden="true"></span>
+        </nav>
+        <a class="botao contorno agenda-cabecalho" href="#contato" data-agendar>
+          <svg class="icone" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+          <span>Agendar agora</span>
+        </a>
+        <button class="alternar-menu" type="button" aria-controls="navegacao" aria-expanded="false" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+      </div>
     </header>
     <main>
-      <section class="abertura" aria-labelledby="titulo">
-        <picture class="retrato">
-          <source media="(max-width: 640px)" srcset="%BASE_URL%texturas/retrato-celular.webp" />
-          <img
-            src="%BASE_URL%texturas/retrato.webp"
-            alt="Retrato em perfil de um homem com cabelo ondulado e capa de barbeiro"
-            fetchpriority="high"
-            width="1536"
-            height="1024"
-          />
-        </picture>
-        <div class="apresentacao">
-          <p class="rotulo">Barbearia de precisão</p>
-          <h1 id="titulo">Mais que um corte,<br />a sua <em>assinatura.</em></h1>
-          <p class="introducao">
-            Corte, barba e acabamento à navalha. Cada detalhe pensado para o seu rosto e para a sua rotina.
-          </p>
-          <a class="botao botao-dourado" href="#agendar" data-agendar
-            >Agendar meu corte <span aria-hidden="true">↗</span></a
-          >
-          <a class="explorar" href="#experiencia">Veja o processo <span aria-hidden="true">↓</span></a>
-        </div>
-      </section>
-      <section class="processo faixa" id="experiencia" aria-labelledby="titulo-processo">
-        <div class="cabecalho-processo">
-          <div>
-            <p class="rotulo">O processo do corte</p>
-            <h2 id="titulo-processo">
-              Da primeira passada<br />
-              <em>ao acabamento.</em>
-            </h2>
+      <section class="abertura" id="inicio" aria-labelledby="titulo">
+        <div class="largura-abertura">
+          <div class="chamada">
+            <p class="rotulo com-linha">Barbearia premium</p>
+            <h1 id="titulo">Estilo, corte<br />e <em>atitude</em></h1>
+            <p class="introducao">Cortes modernos, barba alinhada e um atendimento feito para quem valoriza estilo.</p>
+            <div class="acoes">
+              <a class="botao dourado" href="#contato" data-agendar>
+                <svg class="icone" aria-hidden="true"><use href="#i-agenda" /></svg>
+                Agendar horário
+              </a>
+              <a class="botao contorno conhecer" href="#sobre">
+                <svg class="icone" aria-hidden="true"><use href="#i-conhecer" /></svg>
+                Conheça a RNCWEB
+              </a>
+            </div>
           </div>
-          <p>
-            A máquina define a base. O trabalho de tesoura dá forma ao topo. O acabamento realça a transição
-            e o contorno.
-          </p>
-        </div>
-        <div class="vitrine-processo" >
-          <figure id="processo-maquina">
-            <img
-              src="%BASE_URL%texturas/maquina.webp"
-              alt="Máquina de corte acima da orelha, junto aos fios curtos do degradê"
-              width="512"
-              height="1024"
-              loading="lazy"
-            />
-            <figcaption><strong>Máquina</strong><span>Construção do degradê.</span></figcaption>
-          </figure>
-          <figure id="processo-tesoura">
-            <img
-              src="%BASE_URL%texturas/tesoura.webp"
-              alt="Tesoura e pente trabalhando as mechas do topo"
-              width="512"
-              height="1024"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Tesoura e pente</strong><span>Forma e textura nas mechas do topo.</span>
-            </figcaption>
-          </figure>
-          <figure id="processo-resultado">
-            <img
-              src="%BASE_URL%texturas/resultado.webp"
-              alt="Corte finalizado com transição rente na lateral e topo ondulado"
-              width="512"
-              height="1024"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Acabamento</strong><span>Contorno definido e finalização.</span>
-            </figcaption>
-          </figure>
+          <div class="arte" aria-hidden="true">
+            <img src="%BASE_URL%texturas/arte-dourada.webp" width="726" height="296" alt="" fetchpriority="high" />
+            <span class="reflexo-arte"></span>
+          </div>
         </div>
       </section>
-      <section class="servicos faixa" id="servicos" aria-labelledby="titulo-servicos">
-        <div>
-          <p class="rotulo">Na cadeira</p>
-          <h2 id="titulo-servicos">O ritual <em>Cavalier.</em></h2>
-          <p>
-            Da conversa que define o corte à última passada da navalha. Escolha o atendimento que faz
-            sentido para você.
-          </p>
+
+      <div class="beneficios">
+        <ul class="lista-beneficios" aria-label="Diferenciais da barbearia">
+          <li><svg class="icone" aria-hidden="true"><use href="#i-tesoura" /></svg><div><strong>Cortes personalizados</strong><span>Do clássico ao moderno</span></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-barba" /></svg><div><strong>Barba e acabamento</strong><span>Alinhamento e definição</span></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-diamante" /></svg><div><strong>Ambiente premium</strong><span>Conforto e exclusividade</span></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-cafe" /></svg><div><strong>Bebidas inclusas</strong><span>Café, água e muito mais</span></div></li>
+        </ul>
+        <svg class="linha-beneficios" viewBox="0 0 1280 42" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="ouro-linha"><stop stop-color="#865225"/><stop offset=".07" stop-color="#e8b26c"/><stop offset=".15" stop-color="#805128"/><stop offset=".92" stop-color="#d7a264"/><stop offset="1" stop-color="#f4c982"/></linearGradient></defs>
+          <path d="M0 40h72l36-36M72 40h1147l38-38h23" fill="none" stroke="url(#ouro-linha)" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </div>
+
+      <div class="painel-principal">
+        <svg class="ondas-ouro" viewBox="0 0 540 290" aria-hidden="true">
+          <defs>
+            <linearGradient id="linha-onda" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#b1793d" stop-opacity="0"/><stop offset=".57" stop-color="#ffca82"/><stop offset="1" stop-color="#93612f"/></linearGradient>
+            <linearGradient id="fundo-onda" x1="0" x2="1" y1=".9" y2=".18"><stop stop-color="#211a13" stop-opacity="0"/><stop offset=".7" stop-color="#342c22"/><stop offset="1" stop-color="#1f1b17"/></linearGradient>
+          </defs>
+          <path d="M0 290C245 254 355 156 540 44V290Z" fill="url(#fundo-onda)" opacity=".62"/>
+          <path d="M227 289C302 179 401 105 540 75M308 290c84-64 157-94 232-116M0 290C245 254 355 156 540 44" stroke="url(#linha-onda)" fill="none"/>
+          <path d="M227 289C302 179 401 105 540 75" class="brilho-onda" stroke="#fbbc75" fill="none"/>
+        </svg>
+        <div class="largura-painel">
+          <section id="servicos" class="servicos" aria-labelledby="titulo-servicos">
+            <h2 id="titulo-servicos" class="com-linha">Nossos serviços</h2>
+            <div id="lista-servicos" class="lista-servicos"></div>
+            <noscript><p>Corte, barba, pezinho e combo. <a href="https://wa.me/5528992745086">Consulte os valores pelo WhatsApp.</a></p></noscript>
+          </section>
+          <aside id="detalhe-servico" class="detalhe-servico" aria-labelledby="titulo-detalhe">
+            <p class="rotulo" id="rotulo-detalhe">Mais que um corte,</p>
+            <h3 id="titulo-detalhe">Uma experiência</h3>
+            <p id="descricao-detalhe">Estilo, conforto e atendimento de alto nível em um só lugar.</p>
+            <div class="detalhe-acao" id="acao-detalhe" hidden>
+              <span id="valor-detalhe"></span>
+              <button type="button" class="botao contorno" data-agendar id="agenda-detalhe">Agendar serviço</button>
+            </div>
+          </aside>
         </div>
-        <ul class="tabela" id="lista-servicos"></ul>
-      </section>
-      <section class="barbearia" id="barbearia" aria-labelledby="titulo-barbearia">
-        <img
-          src="%BASE_URL%texturas/oficina.webp"
-          alt="Poltrona de couro escuro em uma barbearia iluminada em bronze"
-          loading="lazy"
-          width="1440"
-          height="960"
-        />
-        <div>
-          <p class="rotulo">A barbearia</p>
-          <h2 id="titulo-barbearia">Tempo para<br /><em>o detalhe.</em></h2>
-          <p>
-            Couro, madeira e luz baixa. Um espaço para desacelerar, conversar sobre o corte e sair com um
-            acabamento pensado para a sua rotina.
-          </p>
-          <dl id="informacoes"></dl>
-          <a class="botao botao-contorno" href="#agendar" data-agendar
-            >Solicitar horário <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
+        <section class="contato" id="contato" aria-label="Endereço, horários e contato">
+          <svg class="moldura-contato" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="ouro-contato"><stop stop-color="#ffd38b"/><stop offset=".18" stop-color="#a57442"/><stop offset="1" stop-color="#775130"/></linearGradient></defs>
+            <path d="M47 1H1174q7 0 11 4l10 10q7 7 1 16l-19 27q-3 5-10 5H16Q1 63 2 52q0-5 4-10L37 6q4-5 10-5Z" fill="none" stroke="url(#ouro-contato)" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <div class="itens-contato">
+            <div><svg class="icone" aria-hidden="true"><use href="#i-local" /></svg><div><strong>Endereço</strong><a id="endereco" href="https://wa.me/5528992745086">Consulte a localização</a></div></div>
+            <div><svg class="icone" aria-hidden="true"><use href="#i-relogio" /></svg><div><strong>Horário de atendimento</strong><a id="horario" href="https://wa.me/5528992745086">Consulte pelo WhatsApp</a></div></div>
+            <div><svg class="icone" aria-hidden="true"><use href="#i-whatsapp" /></svg><div><strong>Fale conosco</strong><a id="whatsapp" href="https://wa.me/5528992745086">(28) 99274-5086</a></div></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="conteudo">
+        <section class="barbeiros secao" id="barbeiros" aria-labelledby="titulo-barbeiros">
+          <div class="texto-secao">
+            <p class="rotulo com-linha">Barbeiros</p>
+            <h2 id="titulo-barbeiros">Cada corte começa<br />com uma conversa.</h2>
+            <p>Quer mudar o visual ou manter o estilo que já funciona? Conte ao barbeiro como você usa o cabelo no dia a dia e escolha o acabamento junto com ele.</p>
+            <details>
+              <summary>O que levar como referência <svg class="icone" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <p>Uma foto do corte ajuda a mostrar o comprimento, o volume no topo e a altura do degradê que você prefere.</p>
+            </details>
+            <details>
+              <summary>Como manter o corte em casa <svg class="icone" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <p>Na finalização, peça para ver quanto produto usar e em que direção pentear. Assim você consegue reproduzir o acabamento em casa.</p>
+            </details>
+          </div>
+          <img class="foto-barbeiros" src="%BASE_URL%texturas/tesoura.webp" alt="Tesoura e pente trabalhando os fios no topo do cabelo" width="512" height="1024" loading="lazy" decoding="async" />
+        </section>
+        <section class="galeria secao" id="galeria" aria-labelledby="titulo-galeria">
+          <div class="topo-galeria">
+            <div><p class="rotulo com-linha">Galeria</p><h2 id="titulo-galeria">Referências de corte</h2></div>
+            <p>Explore acabamentos de perto e escolha uma referência para a sua próxima visita.</p>
+          </div>
+          <div class="fotos" id="fotos-galeria"></div>
+        </section>
+        <section class="sobre secao" id="sobre" aria-labelledby="titulo-sobre">
+          <img src="%BASE_URL%texturas/oficina.webp" alt="Poltrona de couro em um ambiente de barbearia com iluminação dourada" width="1440" height="960" loading="lazy" decoding="async" />
+          <div class="texto-secao">
+            <p class="rotulo com-linha">Sobre a RNCWEB</p>
+            <h2 id="titulo-sobre">Um tempo<br />para você.</h2>
+            <p>O atendimento vai da escolha do corte ao último ajuste no contorno. Diga o que quer mudar, tire suas dúvidas e saia sabendo como cuidar do seu novo visual.</p>
+            <a class="botao dourado" href="#contato" data-agendar><svg class="icone" aria-hidden="true"><use href="#i-agenda" /></svg>Agendar horário</a>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="rodape">
-      <a class="marca" href="#inicio"
-        ><img src="%BASE_URL%marca.svg" width="36" height="36" alt="" /><span
-          >CAVALIER<small>BARBEARIA</small></span
-        ></a
-      >
-      <a id="whatsapp" href="#agendar">WhatsApp <span aria-hidden="true">↗</span></a>
-      <small>Projeto por <strong>RNCWEB</strong></small>
+      <a class="marca" href="#inicio" aria-label="RNCWEB Barbearia, voltar ao início"><span>RNCWEB</span><small>Barbearia</small></a>
+      <a href="#contato">Contato e horários</a>
+      <small>RNCWEB</small>
     </footer>
-    <dialog id="agendar" aria-labelledby="titulo-agendar">
-      <form id="formulario">
-        <button class="fechar" type="button" aria-label="Fechar">×</button>
-        <p class="rotulo">Cavalier</p>
-        <h2 id="titulo-agendar">Reserve seu tempo.</h2>
-        <p>Envie sua preferência. A confirmação é feita pelo WhatsApp.</p>
-        <label
-          >Serviço
-          <select name="servico" required></select
-        ></label>
+
+    <dialog class="janela" id="agendar" aria-labelledby="titulo-agendar">
+      <form id="formulario" class="formulario">
+        <button class="fechar" type="button" data-fechar aria-label="Fechar agendamento">×</button>
+        <p class="rotulo">Agendamento</p>
+        <h2 id="titulo-agendar">Seu horário na RNCWEB</h2>
+        <p class="texto-janela">Informe sua preferência. A disponibilidade é confirmada pelo WhatsApp.</p>
+        <label>Serviço <select name="servico" required></select></label>
+        <p class="resumo-agenda" id="resumo-agenda" aria-live="polite"></p>
         <div class="preferencia">
           <label>Data de preferência <input type="date" name="data" required /></label>
           <label>Horário de preferência <input type="time" name="hora" required /></label>
         </div>
-        <button class="botao botao-dourado" type="submit">
-          Solicitar no WhatsApp <span aria-hidden="true">↗</span>
-        </button>
+        <button class="botao dourado" type="submit"><svg class="icone" aria-hidden="true"><use href="#i-whatsapp" /></svg>Solicitar no WhatsApp</button>
       </form>
+    </dialog>
+
+    <dialog class="janela janela-galeria" id="visualizar-galeria" aria-labelledby="titulo-foto">
+      <button class="fechar" type="button" data-fechar aria-label="Fechar galeria">×</button>
+      <figure><img alt="" /><figcaption><h2 id="titulo-foto"></h2><p id="descricao-foto"></p></figcaption></figure>
+      <div class="controle-fotos">
+        <button class="botao contorno trocar-foto" type="button" data-passo="-1" aria-label="Foto anterior"><svg class="icone" aria-hidden="true"><use href="#i-esquerda" /></svg></button>
+        <span id="posicao-foto" aria-live="polite"></span>
+        <button class="botao contorno trocar-foto" type="button" data-passo="1" aria-label="Próxima foto"><svg class="icone" aria-hidden="true"><use href="#i-direita" /></svg></button>
+      </div>
     </dialog>
     <script type="module" src="/src/scripts/principal.js"></script>
   </body>
