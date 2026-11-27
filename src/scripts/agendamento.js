@@ -17,6 +17,31 @@ export function iniciarAgendamento(empresa, formatarPreco) {
   const { servico, data, hora } = formulario.elements;
   const resumo = janela.querySelector("#resumo-agenda");
   let origem = null;
+  const atalhos = [...formulario.querySelectorAll("[data-data]")];
+
+  function prepararAtalhos(agora) {
+    const amanha = new Date(agora);
+    amanha.setDate(amanha.getDate() + 1);
+    const sabado = new Date(agora);
+    const dias = (6 - sabado.getDay() + 7) % 7 || 7;
+    sabado.setDate(sabado.getDate() + dias);
+    atalhos[0].value = diaLocal(amanha);
+    atalhos[1].value = diaLocal(sabado);
+    atalhos[1].hidden = atalhos[0].value === atalhos[1].value;
+    marcarData();
+  }
+  function marcarData() {
+    for (const atalho of atalhos) {
+      atalho.setAttribute("aria-pressed", String(atalho.value === data.value));
+    }
+  }
+  for (const atalho of atalhos)
+    atalho.addEventListener("click", () => {
+      data.value = atalho.value;
+      hora.setCustomValidity("");
+      marcarData();
+    });
+  data.addEventListener("input", marcarData);
 
   for (const item of empresa.servicos) servico.add(new Option(item.nome, item.nome));
 
@@ -30,7 +55,9 @@ export function iniciarAgendamento(empresa, formatarPreco) {
     if (!botao || janela.open) return;
     evento.preventDefault();
     origem = botao;
-    data.min = diaLocal(new Date());
+    const agora = new Date();
+    data.min = diaLocal(agora);
+    prepararAtalhos(agora);
     hora.setCustomValidity("");
     const selecionado = empresa.servicos.find((item) => item.chave === botao.dataset.agendar);
     if (selecionado) servico.value = selecionado.nome;

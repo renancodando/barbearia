@@ -12,7 +12,7 @@ export const empresa = {
     {
       chave: "corte",
       nome: "Corte",
-      icone: "tesoura",
+      imagemAlt: "Perfil de um corte com degradê médio e topo texturizado",
       resumo: "Estilo e precisão",
       descricao:
         "Do clássico ao degradê. Ajuste de volume, desenho do contorno e finalização para o seu tipo de cabelo.",
@@ -22,7 +22,7 @@ export const empresa = {
     {
       chave: "barba",
       nome: "Barba",
-      icone: "barba",
+      imagemAlt: "Barba alinhada recebendo acabamento à navalha",
       resumo: "Higiene e alinhamento",
       descricao: "Toalha quente, alinhamento do comprimento e contorno à navalha.",
       preco: 55,
@@ -31,7 +31,7 @@ export const empresa = {
     {
       chave: "pezinho",
       nome: "Pezinho",
-      icone: "navalha",
+      imagemAlt: "Máquina de precisão contornando a nuca",
       resumo: "Acabamento preciso",
       descricao: "Renove o contorno da nuca, das costeletas e da linha do cabelo entre um corte e outro.",
       preco: 25,
@@ -40,7 +40,7 @@ export const empresa = {
     {
       chave: "combo",
       nome: "Combo",
-      icone: "camadas",
+      imagemAlt: "Corte de cabelo e barba finalizados em um mesmo atendimento",
       resumo: "Corte + barba",
       descricao: "Corte e barba no mesmo atendimento, com proporções e acabamento pensados em conjunto.",
       preco: 120,

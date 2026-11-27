@@ -29,6 +29,7 @@ export function iniciarGaleria() {
   const posicao = janela.querySelector("#posicao-foto");
   const caminho = (foto) => import.meta.env.BASE_URL + "texturas/" + foto.arquivo + ".webp";
   let indice = 0;
+  const cartoes = [];
   let origem = null;
   let inicioToque = null;
 
@@ -53,8 +54,9 @@ export function iniciarGaleria() {
     miniatura.alt = "";
     miniatura.loading = "lazy";
     miniatura.decoding = "async";
+    miniatura.draggable = false;
     legenda.textContent = foto.titulo;
-    legenda.append(icone("mais"));
+    legenda.append(icone("ampliar"));
     botao.append(miniatura, legenda);
     botao.addEventListener("click", () => {
       origem = botao;
@@ -62,7 +64,9 @@ export function iniciarGaleria() {
       janela.showModal();
     });
     lista.append(botao);
+    cartoes.push(botao);
   }
+  iniciarVitrine(lista, cartoes);
 
   for (const botao of janela.querySelectorAll("[data-passo]")) {
     botao.addEventListener("click", () => exibir(indice + Number(botao.dataset.passo)));
@@ -98,4 +102,83 @@ export function iniciarGaleria() {
     inicioToque = null;
     origem?.focus({ preventScroll: true });
   });
+}
+
+function iniciarVitrine(trilha, cartoes) {
+  const controles = [...document.querySelectorAll("[data-vitrine]")];
+  const reduzido = matchMedia("(prefers-reduced-motion: reduce)");
+  let arrasto = null;
+  let ignorarClique = false;
+  const limite = () => Math.max(0, trilha.scrollWidth - trilha.clientWidth);
+  const destinos = () =>
+    cartoes.map((cartao) => Math.min(limite(), cartao.offsetLeft - cartoes[0].offsetLeft));
+
+  function atualizarControles() {
+    controles[0].disabled = trilha.scrollLeft < 2;
+    controles[1].disabled = trilha.scrollLeft + 2 >= limite();
+  }
+  function deslizar(esquerda) {
+    trilha.scrollTo({ left: esquerda, behavior: reduzido.matches ? "instant" : "smooth" });
+  }
+  for (const botao of controles) {
+    botao.addEventListener("click", () => {
+      const anterior = botao.dataset.vitrine === "-1";
+      const atual = trilha.scrollLeft;
+      const opcoes = destinos();
+      const destino = anterior
+        ? opcoes.findLast((posicao) => posicao < atual - 2)
+        : opcoes.find((posicao) => posicao > atual + 2);
+      deslizar(destino ?? (anterior ? 0 : limite()));
+    });
+  }
+
+  trilha.addEventListener("pointerdown", (evento) => {
+    ignorarClique = false;
+    if (evento.pointerType !== "mouse" || evento.button !== 0) return;
+    arrasto = { id: evento.pointerId, x: evento.clientX, esquerda: trilha.scrollLeft, ativo: false };
+  });
+  trilha.addEventListener("pointermove", (evento) => {
+    if (!arrasto || arrasto.id !== evento.pointerId) return;
+    const deslocamento = evento.clientX - arrasto.x;
+    if (!arrasto.ativo && Math.abs(deslocamento) < 7) return;
+    if (!arrasto.ativo) {
+      trilha.setPointerCapture(evento.pointerId);
+      trilha.classList.add("arrastando");
+      arrasto.ativo = true;
+    }
+    trilha.scrollLeft = arrasto.esquerda - deslocamento;
+  });
+  function encerrarArrasto() {
+    if (!arrasto) return;
+    if (arrasto.ativo) {
+      ignorarClique = true;
+      const atual = trilha.scrollLeft;
+      const encaixe = destinos().reduce(
+        (proximo, posicao) => (Math.abs(posicao - atual) < Math.abs(proximo - atual) ? posicao : proximo),
+        0,
+      );
+      trilha.classList.remove("arrastando");
+      deslizar(encaixe);
+    }
+    arrasto = null;
+  }
+  trilha.addEventListener("pointerup", encerrarArrasto);
+  trilha.addEventListener("pointercancel", encerrarArrasto);
+  trilha.addEventListener("pointerleave", () => {
+    if (!arrasto?.ativo) arrasto = null;
+  });
+  trilha.addEventListener(
+    "click",
+    (evento) => {
+      if (ignorarClique && evento.detail > 0) {
+        evento.preventDefault();
+        evento.stopPropagation();
+        ignorarClique = false;
+      }
+    },
+    { capture: true },
+  );
+  trilha.addEventListener("scroll", atualizarControles, { passive: true });
+  new ResizeObserver(atualizarControles).observe(trilha);
+  atualizarControles();
 }
