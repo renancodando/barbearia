@@ -1,0 +1,3 @@
+# RNCWEB
+User-agent: *
+Allow: /
